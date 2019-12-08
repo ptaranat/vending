@@ -2,9 +2,7 @@ set_property SRC_FILE_INFO {cfile:C:/Users/ptaranat/vending/vending.srcs/constrs
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=clk100mhz
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { state[0] }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
-set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { state[1] }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=sw[1]
+set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { lever }]; #IO_L24N_T3_RS0_15 Sch=sw[0]
 set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { seven[6] }]; #IO_L24N_T3_A00_D16_14 Sch=ca
 set_property src_info {type:XDC file:1 line:61 export:INPUT save:INPUT read:READ} [current_design]

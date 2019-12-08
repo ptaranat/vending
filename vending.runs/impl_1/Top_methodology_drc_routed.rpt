@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Dec  7 18:09:44 2019
+| Date         : Sat Dec  7 22:11:46 2019
 | Host         : ECE-PHO115-22 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
@@ -23,12 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 127
-+-----------+------------------+-----------------------------+------------+
-| Rule      | Severity         | Description                 | Violations |
-+-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 127        |
-+-----------+------------------+-----------------------------+------------+
+             Violations found: 215
++-----------+------------------+------------------------------+------------+
+| Rule      | Severity         | Description                  | Violations |
++-----------+------------------+------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 163        |
+| LUTAR-1   | Warning          | LUT drives async reset alert | 1          |
+| TIMING-20 | Warning          | Non-clocked latch            | 51         |
++-----------+------------------+------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -259,412 +261,852 @@ Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[0]/C is not reached by a timing clock
+The clock pin controller/FSM_sequential_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[10]/C is not reached by a timing clock
+The clock pin controller/FSM_sequential_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[11]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[12]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[13]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[14]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[15]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[16]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[17]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[18]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[19]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[1]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[20]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[21]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[22]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[23]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[24]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[25]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[26]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[27]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[28]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[29]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[2]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[30]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[31]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[3]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#72 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[4]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#73 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[5]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#74 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[6]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#75 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[7]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#76 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[8]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#77 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/count_reg[9]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#78 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_coin/pulse_reg/C is not reached by a timing clock
+The clock pin db_coin/count_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#79 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[0]/C is not reached by a timing clock
+The clock pin db_coin/count_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#80 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[10]/C is not reached by a timing clock
+The clock pin db_coin/pulse_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#81 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[11]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[12]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[13]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#84 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[14]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#85 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[15]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#86 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[16]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[17]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[18]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[19]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[1]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#91 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[20]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[21]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[22]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[23]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#95 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[24]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#96 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[25]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#97 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[26]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#98 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[27]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#99 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[28]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#100 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[29]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#101 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[2]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#102 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[30]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#103 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[31]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#104 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[3]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#105 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[4]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#106 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[5]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#107 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[6]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#108 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[7]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#109 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[8]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#110 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/count_reg[9]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#111 Critical Warning
 Non-clocked sequential cell  
-The clock pin db_snack/pulse_reg/C is not reached by a timing clock
+The clock pin db_snack/count_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#112 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/count2_reg[0]/C is not reached by a timing clock
+The clock pin db_snack/count_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#113 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/count2_reg[1]/C is not reached by a timing clock
+The clock pin db_snack/pulse_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#114 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/digit_select_reg[0]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/digit_select_reg[1]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/digit_select_reg[2]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/digit_select_reg[3]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/display_out_reg[0]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#119 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/display_out_reg[1]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#120 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/display_out_reg[2]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#121 Critical Warning
 Non-clocked sequential cell  
-The clock pin dc/display_out_reg[3]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#122 Critical Warning
 Non-clocked sequential cell  
-The clock pin pay_quarters/FSM_sequential_curr_state_reg[0]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#123 Critical Warning
 Non-clocked sequential cell  
-The clock pin pay_quarters/FSM_sequential_curr_state_reg[1]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#124 Critical Warning
 Non-clocked sequential cell  
-The clock pin pay_quarters/FSM_sequential_curr_state_reg[2]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#125 Critical Warning
 Non-clocked sequential cell  
-The clock pin snack_selector/FSM_sequential_curr_state_reg[0]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#126 Critical Warning
 Non-clocked sequential cell  
-The clock pin snack_selector/FSM_sequential_curr_state_reg[1]/C is not reached by a timing clock
+The clock pin db_vend/count_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#127 Critical Warning
 Non-clocked sequential cell  
+The clock pin db_vend/count_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#128 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#129 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#130 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#131 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#132 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[26]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#133 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[27]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#134 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[28]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#135 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[29]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#136 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#137 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#138 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#139 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#140 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#141 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#142 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#143 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#144 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#145 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/count_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#146 Critical Warning
+Non-clocked sequential cell  
+The clock pin db_vend/pulse_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#147 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/count2_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#148 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/count2_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#149 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/digit_select_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#150 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/digit_select_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#151 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/digit_select_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#152 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/digit_select_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#153 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/display_out_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#154 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/display_out_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#155 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/display_out_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#156 Critical Warning
+Non-clocked sequential cell  
+The clock pin dc/display_out_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#157 Critical Warning
+Non-clocked sequential cell  
+The clock pin pay_quarters/FSM_sequential_curr_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#158 Critical Warning
+Non-clocked sequential cell  
+The clock pin pay_quarters/FSM_sequential_curr_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#159 Critical Warning
+Non-clocked sequential cell  
+The clock pin pay_quarters/FSM_sequential_curr_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#160 Critical Warning
+Non-clocked sequential cell  
+The clock pin pay_quarters/FSM_sequential_curr_state_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#161 Critical Warning
+Non-clocked sequential cell  
+The clock pin snack_selector/FSM_sequential_curr_state_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#162 Critical Warning
+Non-clocked sequential cell  
+The clock pin snack_selector/FSM_sequential_curr_state_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#163 Critical Warning
+Non-clocked sequential cell  
 The clock pin snack_selector/FSM_sequential_curr_state_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell pay_quarters/FSM_sequential_curr_state[3]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) pay_quarters/FSM_sequential_curr_state_reg[0]/CLR, pay_quarters/FSM_sequential_curr_state_reg[1]/CLR, pay_quarters/FSM_sequential_curr_state_reg[2]/CLR, pay_quarters/FSM_sequential_curr_state_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch controller/FSM_sequential_next_state_reg[0] cannot be properly analyzed as its control pin controller/FSM_sequential_next_state_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch controller/FSM_sequential_next_state_reg[1] cannot be properly analyzed as its control pin controller/FSM_sequential_next_state_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[0] cannot be properly analyzed as its control pin controller/display_out_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[11] cannot be properly analyzed as its control pin controller/display_out_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[12] cannot be properly analyzed as its control pin controller/display_out_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[13] cannot be properly analyzed as its control pin controller/display_out_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[14] cannot be properly analyzed as its control pin controller/display_out_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[15] cannot be properly analyzed as its control pin controller/display_out_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[1] cannot be properly analyzed as its control pin controller/display_out_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[2] cannot be properly analyzed as its control pin controller/display_out_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[3] cannot be properly analyzed as its control pin controller/display_out_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[4] cannot be properly analyzed as its control pin controller/display_out_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[5] cannot be properly analyzed as its control pin controller/display_out_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[6] cannot be properly analyzed as its control pin controller/display_out_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[7] cannot be properly analyzed as its control pin controller/display_out_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[8] cannot be properly analyzed as its control pin controller/display_out_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch controller/display_out_reg[9] cannot be properly analyzed as its control pin controller/display_out_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch pay_quarters/FSM_sequential_next_state_reg[0] cannot be properly analyzed as its control pin pay_quarters/FSM_sequential_next_state_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch pay_quarters/FSM_sequential_next_state_reg[1] cannot be properly analyzed as its control pin pay_quarters/FSM_sequential_next_state_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch pay_quarters/FSM_sequential_next_state_reg[2] cannot be properly analyzed as its control pin pay_quarters/FSM_sequential_next_state_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch pay_quarters/FSM_sequential_next_state_reg[3] cannot be properly analyzed as its control pin pay_quarters/FSM_sequential_next_state_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_display_out_reg[2] cannot be properly analyzed as its control pin pay_quarters/coin_display_out_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_display_out_reg[6] cannot be properly analyzed as its control pin pay_quarters/coin_display_out_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_display_out_reg[8] cannot be properly analyzed as its control pin pay_quarters/coin_display_out_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_display_out_reg[9] cannot be properly analyzed as its control pin pay_quarters/coin_display_out_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[0] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[3] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[4] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[5] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[6] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch pay_quarters/coin_out_bin_reg[7] cannot be properly analyzed as its control pin pay_quarters/coin_out_bin_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[0] cannot be properly analyzed as its control pin vend_snack/change_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[1] cannot be properly analyzed as its control pin vend_snack/change_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[2] cannot be properly analyzed as its control pin vend_snack/change_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[3] cannot be properly analyzed as its control pin vend_snack/change_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[4] cannot be properly analyzed as its control pin vend_snack/change_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[5] cannot be properly analyzed as its control pin vend_snack/change_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[6] cannot be properly analyzed as its control pin vend_snack/change_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch vend_snack/change_reg[7] cannot be properly analyzed as its control pin vend_snack/change_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[0] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[11] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[13] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[1] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[2] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[3] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[4] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[5] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[6] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[7] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[8] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch vend_snack/vend_display_out_reg[9] cannot be properly analyzed as its control pin vend_snack/vend_display_out_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 

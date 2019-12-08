@@ -14,7 +14,7 @@ module Seven_Segment(
       
       4'b0101 : out <= 7'b0100100; //5
       
-      4'b0110 : out <= 7'b1111010; //r return
+      4'b0110 : out <= 7'b1111010; //r Poor
       4'b0111 : out <= 7'b0001111; //7
       4'b1000 : out <= 7'b0100001; //G Good
       4'b1001 : out <= 7'b1100010; //o Error

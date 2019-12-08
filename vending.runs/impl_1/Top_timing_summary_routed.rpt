@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Dec  7 18:09:44 2019
+| Date         : Sat Dec  7 22:11:46 2019
 | Host         : ECE-PHO115-22 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Top
@@ -53,13 +53,53 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 111 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 146 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: cost (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: reset (HIGH)
 
  There are 10 register/latch pins with no clock driven by root clock pin: cd/clk_1khz_reg/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: db_coin/pulse_reg/Q (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: controller/FSM_sequential_state_reg[0]/Q (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: db_snack/pulse_reg/Q (HIGH)
+ There are 15 register/latch pins with no clock driven by root clock pin: controller/FSM_sequential_state_reg[1]/Q (HIGH)
+
+ There are 19 register/latch pins with no clock driven by root clock pin: db_coin/pulse_reg/Q (HIGH)
+
+ There are 18 register/latch pins with no clock driven by root clock pin: db_snack/pulse_reg/Q (HIGH)
+
+ There are 15 register/latch pins with no clock driven by root clock pin: db_vend/pulse_reg/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: pay_quarters/FSM_sequential_curr_state_reg[0]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: pay_quarters/FSM_sequential_curr_state_reg[1]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: pay_quarters/FSM_sequential_curr_state_reg[2]/Q (HIGH)
+
+ There are 14 register/latch pins with no clock driven by root clock pin: pay_quarters/FSM_sequential_curr_state_reg[3]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_display_out_reg[6]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_display_out_reg[8]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[0]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[3]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[4]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[5]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[6]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: pay_quarters/coin_out_bin_reg[7]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: snack_selector/FSM_sequential_curr_state_reg[0]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: snack_selector/FSM_sequential_curr_state_reg[1]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: snack_selector/FSM_sequential_curr_state_reg[2]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -74,14 +114,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 285 pins that are not constrained for maximum delay. (HIGH)
+ There are 417 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 5 input ports with no input delay specified. (HIGH)
+ There are 6 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
