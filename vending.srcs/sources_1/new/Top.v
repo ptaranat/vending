@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module Top(
-  input clk, reset, snack, cost, coin, vend, lever, [1:0] state, output [7:0] digit_select, output [6:0] seven
+  input clk, reset, snack, cost, coin, vend, lever, vend_lever, [1:0] state, output [7:0] digit_select, output [6:0] seven, output point
   );
   wire fastclk;
   wire slowclk;
@@ -35,7 +35,7 @@ module Top(
   
   Debouncer              db_vend(.clk(clk), .reset(reset), .pb(vend), .pulse(vend_db));                                    
   Vend                   vend_snack(.cost_out_bin(cost_out_bin), .coin_out_bin(coin_out_bin), .vend_display_out(vend_display_out),
-                                    .broke(broke));
+                                    .broke(broke), .vend_lever(vend_lever));
   
   Controller             controller(.clk(clk), .reset(reset), .snack(snack_db), .coin(coin_db), .cost(cost), .vend(vend_db),
                                     .snack_display_in(snack_display_out), .coin_display_in(coin_display_out),
@@ -44,6 +44,6 @@ module Top(
   
   // TODO make input to DC switch between states
   
-  Display_Control        dc(.clk(fastclk), .reset(reset), .in(display_in),  .digit_select(digit_select), .display_out(display_out));
+  Display_Control        dc(.clk(fastclk), .reset(reset), .in(display_in),  .digit_select(digit_select), .display_out(display_out), .point(point));
   Seven_Segment ssd(.in(display_out), .out(seven));
 endmodule

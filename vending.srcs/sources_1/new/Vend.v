@@ -1,8 +1,9 @@
 `timescale 1ns / 1ps
 
-module Vend(cost_out_bin, coin_out_bin, vend_display_out, broke);
+module Vend(cost_out_bin, coin_out_bin, vend_display_out, broke, vend_lever);
   input [7:0] cost_out_bin;
   input [7:0] coin_out_bin;
+  input vend_lever;
   output reg [15:0] vend_display_out;
   output reg broke;
   parameter r=4'b0110;
@@ -21,10 +22,16 @@ module Vend(cost_out_bin, coin_out_bin, vend_display_out, broke);
     if (cost > coin) begin
       vend_display_out <= 16'b0100100110010110; // Poor
       broke <= 1;
-    end else begin
+    end 
+    else begin
       change = coin_out_bin - cost_out_bin;
-      vend_display_out = {r, bcd_change}; //r150
-      broke <= 0;
+      if (vend_lever) begin
+        vend_display_out = 16'b1000100110011101; // Good
+        broke <= 0;
+      end else begin
+        vend_display_out = {r, bcd_change}; //r150
+        broke <= 0;
+      end
     end
   end
 endmodule

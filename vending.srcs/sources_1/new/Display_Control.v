@@ -3,7 +3,8 @@
 module Display_Control(
   input clk, reset, [15:0] in, 
   output reg [7:0] digit_select, 
-  output reg [3:0] display_out
+  output reg [3:0] display_out,
+  output reg point
   );
   reg [1:0] count2;
   always @(posedge clk) begin
@@ -18,18 +19,22 @@ module Display_Control(
     2'b00: begin
       digit_select <= 8'b11111110;
       display_out <= in[3:0];
+      point <= 1;
     end
     2'b01: begin
       digit_select <= 8'b11111101;
       display_out <= in[7:4];
+      point <= 1;
     end
     2'b10: begin
       digit_select <= 8'b11111011;
       display_out <= in[11:8];
+      point <= 0;
     end
     2'b11: begin
       digit_select <= 8'b11110111;
       display_out <= in[15:12];
+      point <= 1;
     end
     endcase
   end
