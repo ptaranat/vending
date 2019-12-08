@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module Top(
-  input clk, reset, snack, cost, coin, vend, lever, [1:0] state, output [3:0] digit_select, output [6:0] seven
+  input clk, reset, snack, cost, coin, vend, lever, [1:0] state, output [7:0] digit_select, output [6:0] seven
   );
   wire fastclk;
   wire slowclk;

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sat Dec  7 22:11:46 2019
+| Date             : Sat Dec  7 22:23:49 2019
 | Host             : ECE-PHO115-22 running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.023        |
+| Total On-Chip Power (W)  | 2.125        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.931        |
-| Device Static (W)        | 0.091        |
+| Dynamic (W)              | 2.033        |
+| Device Static (W)        | 0.092        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 75.8         |
-| Junction Temperature (C) | 34.2         |
+| Max Ambient (C)          | 75.3         |
+| Junction Temperature (C) | 34.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.055 |      460 |       --- |             --- |
-|   LUT as Logic |     0.918 |      134 |     63400 |            0.21 |
+| Slice Logic    |     1.106 |      461 |       --- |             --- |
+|   LUT as Logic |     0.969 |      133 |     63400 |            0.21 |
 |   CARRY4       |     0.076 |       39 |     15850 |            0.25 |
 |   Register     |     0.056 |      214 |    126800 |            0.17 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       22 |       --- |             --- |
-| Signals        |     0.852 |      391 |       --- |             --- |
-| I/O            |     0.024 |       18 |       210 |            8.57 |
-| Static Power   |     0.091 |          |           |                 |
-| Total          |     2.023 |          |           |                 |
+|   Others       |     0.000 |       23 |       --- |             --- |
+| Signals        |     0.903 |      392 |       --- |             --- |
+| I/O            |     0.024 |       22 |       210 |           10.48 |
+| Static Power   |     0.092 |          |           |                 |
+| Total          |     2.125 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.953 |       1.931 |      0.021 |
+| Vccint    |       1.000 |     2.055 |       2.033 |      0.022 |
 | Vccaux    |       1.800 |     0.019 |       0.000 |      0.019 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,16 +138,16 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| Top              |     1.931 |
-|   cd             |     0.535 |
-|   controller     |     0.163 |
-|   db_coin        |     0.139 |
-|   db_snack       |     0.115 |
-|   db_vend        |     0.111 |
-|   dc             |     0.143 |
-|   pay_quarters   |     0.013 |
-|   snack_selector |     0.301 |
-|   vend_snack     |     0.349 |
+| Top              |     2.033 |
+|   cd             |     0.588 |
+|   controller     |     0.128 |
+|   db_coin        |     0.141 |
+|   db_snack       |     0.118 |
+|   db_vend        |     0.115 |
+|   dc             |     0.147 |
+|   pay_quarters   |     0.014 |
+|   snack_selector |     0.307 |
+|   vend_snack     |     0.410 |
 +------------------+-----------+
 
 
